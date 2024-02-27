@@ -54,7 +54,7 @@ async function selectPokemon() {
 function check() {
     const input = document.getElementById("pokeName").value;
     if (input.toLowerCase() === pokeName.toLowerCase()) {
-        updateScore();
+        updateScore("correct");
         document.getElementById("pokeName").style.backgroundColor = "green";
         document.getElementById("pokeName").setAttribute("disabled", "true");
         setTimeout(selectPokemon, 2000);
@@ -66,6 +66,7 @@ function check() {
  * sets its value to pokeName, and calls the selectPokemon function after a delay of 2000 milliseconds.
  */
 function surrend() {
+    updateScore("surrend");
     document.getElementById("pokeName").setAttribute("disabled", "true");
     document.getElementById("pokeName").style.backgroundColor = "red";
     document.getElementById("pokeName").value = pokeName;
@@ -100,8 +101,12 @@ function updateGenerationList(gen) {
 /**
  * Updates the score and best score in the game.
  */
-function updateScore() {
-    score++;
+function updateScore(action) {
+    if(action === "correct")
+        score++;
+    else if(action === "surrend") {
+        score = 0;
+    }
     if(score > bestScore) {
         localStorage.setItem("bestScore", score);
         bestScore = score;
