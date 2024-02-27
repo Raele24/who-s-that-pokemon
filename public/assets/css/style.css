@@ -246,3 +246,68 @@ body {
   align-items: space-evenly;
   flex-direction: row;
 }
+
+
+/* Easy mode */
+.choice {
+  height: auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+
+.e{
+  margin-right: 10px;
+}
+
+.e:hover{
+  cursor: pointer;
+}
+
+.buttons{
+  width: 80%;
+  color: white;
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.changeMode{
+  background-color: #313131;
+  color: white;
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  border: #fff solid 1px;
+  transition: all 0.3s ease;
+}
+.changeMode:hover{
+  background-color: rgb(9, 45, 123);
+  color: white;
+  cursor: pointer;
+}
+
+.left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

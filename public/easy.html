@@ -20,13 +20,22 @@
             <div class="loading-big" id="loading"></div>
             <div class="img" id="pokemonImg"></div>
         </div>
-        <input type="text" class="selectGen" id="pokeName" placeholder="Insert Pokèmon name" oninput="check()">
+        <div class="choice">
+            <div class="left">
+                <input type="text" class="selectGen e" id="poke1" onclick="check(event)" readonly>
+                <input type="text" class="selectGen e" id="poke2" onclick="check(event)" readonly>
+            </div>
+            <div class="right">
+                <input type="text" class="selectGen e" id="poke3" onclick="check(event)" readonly>
+                <input type="text" class="selectGen e" id="poke4" onclick="check(event)" readonly>
+            </div>
+        </div>
         <div class="buttons">
             <div class="left">
                 <div class="surrend" id="surrend" onclick="surrend()" style="margin-right: 10px;">Surrender?</div>
             </div>
             <div class="right">
-                <div class="changeMode" id="changeMode" onclick="changeMode()">Try easy mode?</div>
+                <div class="changeMode" id="changeMode" onclick="changeMode()">Try normal mode?</div>
             </div>
         </div>
         <div class="settings">
@@ -55,6 +64,6 @@
 </body>
 <script src="./assets/environment/pokedex.js"></script>
 <script src="./assets/js/pokeApiReq.js"></script>
-<script src="./assets/js/pokeService.js"></script>
+<script src="./assets/js/pokeServiceEasyVer.js"></script>
 
 </html>

@@ -27,10 +27,11 @@ let pokeName = "";   // Name of the pokemon to guess
  * @returns {Promise<void>} A promise that resolves once the Pokemon is selected and the UI is updated.
  */
 async function selectPokemon() {
-    console.log(bestScore)
+    document.getElementById("surrend").onclick = null;
     document.getElementById("pokeName").style.backgroundColor = "#313131";
     document.getElementById("pokeName").value = "";
     document.getElementById("pokemonImg").style.display = "none";
+    document.getElementById("pokemonImg").style.filter = "grayscale(100%) brightness(0%) drop-shadow(0 0 5px white)";
     document.getElementById("loading").style.display = "block";
     const generation = Object.keys(generationsNames)[Math.floor(Math.random() * Object.keys(generationsNames).length)];
     generationName = generationsNames[generation];
@@ -41,9 +42,9 @@ async function selectPokemon() {
     document.getElementById("pokeName").removeAttribute("disabled");
     pokeName = pokemon.name;
     document.getElementById("pokemonImg").style.backgroundImage = "url(" + pokemon.image + ")";
-
     document.getElementById("pokemonImg").style.display = "block";
     document.getElementById("loading").style.display = "none";
+    document.getElementById("surrend").onclick = surrend;
 }
 
 /**
@@ -57,6 +58,7 @@ function check() {
         updateScore("correct");
         document.getElementById("pokeName").style.backgroundColor = "green";
         document.getElementById("pokeName").setAttribute("disabled", "true");
+        document.getElementById("pokemonImg").style.filter = "none";
         setTimeout(selectPokemon, 2000);
     }
 }
@@ -69,6 +71,7 @@ function surrend() {
     updateScore("surrend");
     document.getElementById("pokeName").setAttribute("disabled", "true");
     document.getElementById("pokeName").style.backgroundColor = "red";
+    document.getElementById("pokemonImg").style.filter = "none";
     document.getElementById("pokeName").value = pokeName;
     setTimeout(selectPokemon, 2000);
 }
@@ -113,4 +116,8 @@ function updateScore(action) {
     }
     document.getElementById("score").innerHTML = "Score: " + score;
     document.getElementById("bestScore").innerHTML = "Best Score: " + bestScore
+}
+
+function changeMode(){
+    window.location.href = "./easy.html";
 }
