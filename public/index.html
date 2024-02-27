@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/images/favicon/favicon.ico">
+    <title>Who's that Pokèmon?</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Who's that Pokèmon?</h1>
+        <div class="points">
+            <div class="bestscore" id="bestScore">Best Score : 0</div>
+            <div class="score" id="score">Score : 0</div>
+        </div>
+        <div class="card">
+            <div class="loading-big" id="loading"></div>
+            <div class="img" id="pokemonImg"></div>
+        </div>
+        <input type="text" class="selectGen" id="pokeName" oninput="check()">
+        <div class="surrend" id="surrend" onclick="surrend()">Surrender?</div>
+        <div class="settings">
+            <ul class="left" id="genList">
+                <li class="gen" id="gen1" onclick="updateGenerationList('gen1')">Gen 1 &nbsp;&nbsp;&nbsp; ✓</li>
+                <li class="gen" id="gen2" onclick="updateGenerationList('gen2')">Gen 2 &nbsp;&nbsp;&nbsp; ✓</li>
+                <li class="gen" id="gen3" onclick="updateGenerationList('gen3')">Gen 3 &nbsp;&nbsp;&nbsp; ✓</li>
+                <li class="gen" id="gen4" onclick="updateGenerationList('gen4')">Gen 4 &nbsp;&nbsp;&nbsp; ✓</li>
+                <li class="gen" id="gen5" onclick="updateGenerationList('gen5')">Gen 5 &nbsp;&nbsp;&nbsp; ✓</li>
+            </ul>
+            <ul class="right" id="typeList">
+                <li class="gen" id="gen6" onclick="updateGenerationList('gen6')">Gen 6 &nbsp;&nbsp;&nbsp; ✓</li>
+                <li class="gen" id="gen7" onclick="updateGenerationList('gen7')">Gen 7 &nbsp;&nbsp;&nbsp; ✓</li>
+                <li class="gen" id="gen8" onclick="updateGenerationList('gen8')">Gen 8 &nbsp;&nbsp;&nbsp; ✓</li>
+                <li class="gen" id="gen9" onclick="updateGenerationList('gen9')">Gen 9 &nbsp;&nbsp;&nbsp; ✓</li>
+                <li class="gen" id="past" onclick="updateGenerationList('past')">Past &nbsp;&nbsp;&nbsp; ✓</li>
+            </ul>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer>
+            <p>Created by <a href="https://github.com/Raele24">Raele24</a> - 2024</p>
+        </footer>
+</body>
+<script src="./assets/environment/pokedex.js"></script>
+<script src="./assets/js/pokeApiReq.js"></script>
+<script src="./assets/js/pokeService.js"></script>
+
+</html>
