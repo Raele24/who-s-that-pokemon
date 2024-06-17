@@ -2,7 +2,7 @@
 
 Welcome to the "Who's That Pokémon?" repository! This project is a fun and interactive web application where users can guess the name of the Pokémon based on their silhouette. The application is hosted on Firebase and can be accessed [here](https://who-s-that-pokemon-3d4b2.web.app/).
 
-![Screenshot](screenshot.png)
+![image](https://github.com/Raele24/who-s-that-pokemon/assets/119336725/5f1d4635-2c3a-40ef-bec9-a9b2a9148a95)
 
 ## Table of Contents
 
@@ -67,14 +67,14 @@ To run this project locally, follow these steps:
 
 ## Screenshots
 
-### Home Screen
-![Home Screen](screenshots/home.png)
+### Correct Answer Mobile - Easy Mode
+![image](https://github.com/Raele24/who-s-that-pokemon/assets/119336725/df30a130-d810-46ae-a787-fe915ab0a822)
 
-### Guessing a Pokémon
-![Guess Screen](screenshots/guess.png)
+### Correct Answer Desktop - Classic Mode
+![image](https://github.com/Raele24/who-s-that-pokemon/assets/119336725/f8fe70b1-c3ad-4a6a-a461-c0307ca454db)
 
-### Correct Answer
-![Correct Answer](screenshots/correct.png)
+### Selectable Gens
+![image](https://github.com/Raele24/who-s-that-pokemon/assets/119336725/3434ce71-1d24-4ce8-98b3-98898536ac55)
 
 ## Contributing
 
